@@ -50,16 +50,23 @@ namespace SwiatAlkoholi
 
             if(age >= 18)
             {
-                panel4.Visible = true;
-                button2.Visible = true;
+                base1.BringToFront();
             }
-            else 
+            else
             {
-                panel4.Visible = false;
-                button2.Visible = false;
+                start1.BringToFront();
+
             }
         }
 
-        
+        private void base1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void start1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

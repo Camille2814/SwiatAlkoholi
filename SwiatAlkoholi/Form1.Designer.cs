@@ -34,18 +34,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.base1 = new SwiatAlkoholi.Base();
+            this.start1 = new SwiatAlkoholi.Start();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -108,6 +106,25 @@
             this.panel3.Size = new System.Drawing.Size(615, 405);
             this.panel3.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(144, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Data urodzenia:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(272, 116);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(220, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(329, 70);
@@ -150,78 +167,38 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(272, 116);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(220, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(144, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Data urodzenia:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.richTextBox1);
-            this.panel4.Location = new System.Drawing.Point(21, 154);
+            this.panel4.Controls.Add(this.start1);
+            this.panel4.Controls.Add(this.base1);
+            this.panel4.Location = new System.Drawing.Point(18, 173);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(574, 228);
+            this.panel4.Size = new System.Drawing.Size(574, 206);
             this.panel4.TabIndex = 6;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // richTextBox1
+            // base1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(299, 14);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(259, 200);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.base1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.base1.Location = new System.Drawing.Point(0, 0);
+            this.base1.Name = "base1";
+            this.base1.Size = new System.Drawing.Size(574, 206);
+            this.base1.TabIndex = 0;
+            this.base1.Load += new System.EventHandler(this.base1_Load);
             // 
-            // comboBox1
+            // start1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(14, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(265, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Wybierz produkt ";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(189, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Dodaj";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Maroon;
-            this.button2.Location = new System.Drawing.Point(168, 181);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 33);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Złóż zamówienie";
-            this.button2.UseVisualStyleBackColor = false;
+            this.start1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.start1.Location = new System.Drawing.Point(-3, 0);
+            this.start1.Name = "start1";
+            this.start1.Size = new System.Drawing.Size(574, 206);
+            this.start1.TabIndex = 1;
+            this.start1.Load += new System.EventHandler(this.start1_Load);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1023, 579);
             this.Controls.Add(this.panel3);
@@ -258,10 +235,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private Base base1;
+        private Start start1;
     }
 }
 
